@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <!--<link rel="stylesheet" type="text/css" href="/stylesheets/registration.css">-->
+</head>
+<body  style="background-image: url(../images/fon6.jpg);">
+
+
+<% include partials/header %>
+
+    <div class="container container-table text-center" >
+        <div class="row vertical-center-row">
+            <div class="col-md-4 col-md-offset-4">
+                <form action="/register" method="POST" enctype='multipart/form-data'>
+                    <div class="form-group">
+                        <label for="name">Ім'я</label>
+                        <input type="text" class="form-control"  id="name" name="name" required pattern="^[А-Яа-яa-zA-Z\s]+$" placeholder="Ім'я">
+                    </div>
+                    <div class="form-group">
+                        <label for="login">Логин</label>
+                        <input type="text" class="form-control"  id="login" name="login" required  placeholder="Логин">
+                        <% if(error !=null && error == "Логін занятий"){%>
+                            <label style="color:red"><%=error%></label>
+                        <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" class="form-control" id="password" name="password" required  placeholder="Пароль">
+                        <% if(error !=null && error != "Логін занятий"){%>
+                            <label style="color:red"><%=error%></label>
+                        <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="password1">Повторіть пароль</label>
+                        <input type="password" class="form-control" id="password1" name="password1" required  placeholder="Пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Пошта</label>
+                        <input type="text" class="form-control" id="email" name="email" required  placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Рік</label>
+                        <select class="form-control" id="year" name="year">
+                        <%for(let i = 1950; i <=2017; i++){%>
+                            <option><%=i%></option>
+                        <% } %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ava">Виберіть аватар</label>
+                        <input  type="file" required id="ava" name="ava" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Регістрація" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

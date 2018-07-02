@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Books</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Vadim Scherbina">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/booksstyle.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js'></script>
+</head>
+
+<body>
+    <% include partials/header %>
+
+<div id="app"> </div>
+   <script id="my-list-template" type="x-tmpl-mustache">   
+        <div>
+            <ul id="list-group">
+            {{#list}}
+                <li>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-2">
+                                <a href="books/{{_id}}"><img src ={{image}} alt="{{name}}" class="img"></a>
+                                    
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <h1 style="color: #110E0E;font-family: 'Century Schoolbook L', bold;font-size: 40px;font-weight: 600">
+                                   {{name}}
+                                   
+                                   
+                                </h1>
+                                <h3 style="font-family: 'Century Schoolbook L', bold;font-size: 20px;font-weight: 600;border: 2px solid #333;border: 2px solid #333; padding-left:10%;">
+                                    Автор - {{authorName}} {{authorSurname}}<br> 
+                                    Язык издания - {{language}}<br>
+                                    Количество страниц - {{pages}}
+                                    Год выпуска - {{year}}<br>
+                                    Дата добавления - {{date}}<br>
+                                </h3>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </li>
+            {{/list}}            
+            </ul>
+        </div>
+         <footer id="footer" class="footer navbar-bottom text-center">
+                {{#pages}}
+                    <input type="submit" class="btn btn-secondary" id="Page{{page}}" value="{{page}}">
+                {{/pages}} 
+        </footer>
+       
+
+        </script>
+       
+            
+       
+
+    <script src="/javascript/search.js"></script>
+</body>
+
+</html>

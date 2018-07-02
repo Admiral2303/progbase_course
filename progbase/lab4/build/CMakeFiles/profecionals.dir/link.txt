@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprofecionals.a  CMakeFiles/profecionals.dir/src/list.c.o CMakeFiles/profecionals.dir/src/convert.c.o CMakeFiles/profecionals.dir/src/function.c.o CMakeFiles/profecionals.dir/src/menu.c.o
+/usr/bin/ranlib libprofecionals.a

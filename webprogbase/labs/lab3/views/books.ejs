@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MY FIRST SITE</title>
+  <meta name="viewport" content="width=device-width" /> 
+  <meta name="author" content="Vadim Scherbina">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/booksstyle.css">
+</head>
+
+<body>
+
+
+
+
+
+<%for(let book of books){%>
+<li>
+  <div class="book">  
+    <a href="books/<%=book.id %>"><img src="/images/<%= book.image%>" alt="<%=book.name%>" class="img"></a>
+    <h1 class="book-name "><%= book.name %></h1>
+      <div class="book-info">
+        <h3 > 
+          Автор - <%= book.authorName %> <%= book.authorSurname %><br>
+          Язык издания - <%= book.language %><br>
+          Количество страниц - <%= book.pages %><br>
+          Год выпуска - <%= book.year %><br>
+          Дата добавления - <%= book.date %><br>
+        </h3> 
+      </div>
+      <hr class="line">
+  </div>
+</li>
+<% } %>
+
+
+
+
+
+
+ 
+
+    <nav class="navbar">
+        <img src="/images/book.png" width="30" height="30" alt="book">
+        <a class="navbar-link" href="/">BookA</a>
+    </nav>
+    <a class="button2" href="/books">Books</a>
+</body>
+
+</html>

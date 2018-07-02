@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html [
+  <!ENTITY % newTabDTD SYSTEM "chrome://browser/locale/newTab.dtd">
+  %newTabDTD;
+  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
+  %browserDTD;
+  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" hasBrowserHandlers="true">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>New Tab</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/global.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/contentSearchUI.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/newTab_002.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/newTab.css" />
+</head>
+
+<body dir="ltr">
+  <div id="newtab-customize-overlay"></div>
+
+  <div class="newtab-customize-panel-container">
+    <div id="newtab-customize-panel" orient="vertical">
+        <div id="newtab-customize-panel-anchor"></div>
+        <div id="newtab-customize-panel-inner-wrapper">
+          <div id="newtab-customize-title" class="newtab-customize-panel-item">
+            <label>NEW TAB CONTROLS</label>
+          </div>
+
+          <div class="newtab-customize-complex-option">
+            <div id="newtab-customize-classic" class="newtab-customize-panel-superitem newtab-customize-panel-item selectable" selected="true">
+                <label>Show your top sites</label>
+            </div>
+            <div id="newtab-customize-enhanced" class="newtab-customize-panel-subitem" selected="true">
+                <label class="checkbox"></label>
+                <label>Include suggested sites</label>
+            </div>
+          </div>
+          <div id="newtab-customize-blank" class="newtab-customize-panel-item selectable">
+            <label>Show blank page</label>
+          </div>
+          <div id="newtab-customize-learn" class="newtab-customize-panel-item">
+            <label>Learn about New Tab</label>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="newtab-vertical-margin">
+    <div id="newtab-margin-top"></div>
+
+    <div id="newtab-margin-undo-container">
+      <div id="newtab-undo-container" undo-disabled="true">
+        <label id="newtab-undo-label">Thumbnail removed.</label>
+        <button id="newtab-undo-button" tabindex="-1" class="newtab-undo-button">Undo.</button>
+        <button id="newtab-undo-restore-button" tabindex="-1" class="newtab-undo-button">Restore All.</button>
+        <button id="newtab-undo-close-button" tabindex="-1" title="Hide"></button>
+      </div>
+    </div>
+
+    <div id="newtab-search-container">
+      <div id="newtab-search-form">
+        <div id="newtab-search-icon"></div>
+        <input name="q" id="newtab-search-text" aria-label="Search query" maxlength="256" autocomplete="off" aria-autocomplete="true" aria-controls="searchSuggestionTable" aria-expanded="false" placeholder="Search" type="text" />
+        <input id="newtab-search-submit" title="Submit search" value="▶" type="button" />
+      <table id="searchSuggestionTable" class="contentSearchSuggestionTable" role="presentation" hidden=""><tr class="contentSearchHeaderRow"><td class="contentSearchHeader" id="contentSearchDefaultEngineHeader"><img src="blob:null/46d921c8-0128-489f-b98d-4f00e9ee5912" />Google Search</td></tr><tr class="contentSearchSuggestionsContainer"><td class="contentSearchSuggestionsContainer"><table class="contentSearchSuggestionsList" role="listbox"></table></td></tr><table class="contentSearchOneOffsTable contentSearchSuggestionsContainer" role="group"><tr class="contentSearchHeaderRow"><td class="contentSearchHeader" id="contentSearchSearchWithHeader">Search with:</td></tr></table><button class="contentSearchSettingsButton contentSearchHeaderRow contentSearchHeader" id="contentSearchSettingsButton" aria-selected="false">Change Search Settings</button></table></div>
+    </div>
+
+    <div id="newtab-horizontal-margin">
+      <div class="newtab-side-margin"></div>
+      <div id="newtab-grid" style="width: 1240px; max-width: 1551px; height: 802px; max-height: 802px;">
+        <h1 id="topsites-heading">Your Top Sites</h1>
+      <div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="http://localhost:3000/" href="http://localhost:3000/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Flocalhost%3A3000%2F&amp;revision=4029&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">localhost</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Telegram Web
+https://web.telegram.org/#/im?p=@yarik_z" href="https://web.telegram.org/#/im?p=@yarik_z">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fweb.telegram.org%2F%23%2Fim%3Fp%3D%40yarik_z&amp;revision=803&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">web.telegram.org</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="GitHub
+https://github.com/" href="https://github.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fgithub.com%2F&amp;revision=6544&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">github.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="MEGA
+https://mega.nz/" href="https://mega.nz/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fmega.nz%2F&amp;revision=6796&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">mega.nz</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Входящие - fpm.kp61@gmail.com - Gmail
+https://mail.google.com/mail/u/0/#inbox" href="https://mail.google.com/mail/u/0/#inbox">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%23inbox&amp;revision=7910&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">mail.google.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="http://progbase.herokuapp.com/" href="http://progbase.herokuapp.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fprogbase.herokuapp.com%2F&amp;revision=5711&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">progbase.herokuapp.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="BookA
+file:///home/admiral23/web_lab1/web_l1/index.html" href="file:///home/admiral23/web_lab1/web_l1/index.html">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=file%3A%2F%2F%2Fhome%2Fadmiral23%2Fweb_lab1%2Fweb_l1%2Findex.html&amp;revision=560&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title"></span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="newbalance ua - Поиск в Google
+https://www.google.com.ua/search?client=ubuntu&amp;channel=fs&amp;q=newbalance+ua&amp;ie=utf-8&amp;oe=utf-8&amp;gfe_rd=cr&amp;dcr=0&amp;ei=kQDAWamCN6y46ATIg4gQ" href="https://www.google.com.ua/search?client=ubuntu&amp;channel=fs&amp;q=newbalance+ua&amp;ie=utf-8&amp;oe=utf-8&amp;gfe_rd=cr&amp;dcr=0&amp;ei=kQDAWamCN6y46ATIg4gQ">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.google.com.ua%2Fsearch%3Fclient%3Dubuntu%26channel%3Dfs%26q%3Dnewbalance%2Bua%26ie%3Dutf-8%26oe%3Dutf-8%26gfe_rd%3Dcr%26dcr%3D0%26ei%3DkQDAWamCN6y46ATIg4gQ&amp;revision=549&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">google.com.ua</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Купить предметы | Магазин Counter-Strike: Global Offensive
+https://csgo.tm/" href="https://csgo.tm/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fcsgo.tm%2F&amp;revision=6987&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">csgo.tm</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="vadim_230399 / home — Bitbucket
+https://bitbucket.org/" href="https://bitbucket.org/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fbitbucket.org%2F&amp;revision=569&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">bitbucket.org</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="CS:GO Bounty
+https://csgobounty.com/" href="https://csgobounty.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fcsgobounty.com%2F&amp;revision=2162&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">csgobounty.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Книга «Чудо-Женщина. Книга 2. Железо и Война» Брайан Аззарелло - купить на OZON.ru книгу с быстрой доставкой | 978-5-389-12453-0
+http://www.ozon.ru/context/detail/id/141835804/" href="http://www.ozon.ru/context/detail/id/141835804/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fwww.ozon.ru%2Fcontext%2Fdetail%2Fid%2F141835804%2F&amp;revision=1600&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">ozon.ru</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="WebMoney Кошелёк »
+https://mini.webmoney.ua/telepay-contractor-list.aspx?categoryId=1" href="https://mini.webmoney.ua/telepay-contractor-list.aspx?categoryId=1">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fmini.webmoney.ua%2Ftelepay-contractor-list.aspx%3FcategoryId%3D1&amp;revision=2053&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">mini.webmoney.ua</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Кафедра загальної та теоретичної фізики НТУУ КПІ
+http://zitf.kpi.ua/" href="http://zitf.kpi.ua/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fzitf.kpi.ua%2F&amp;revision=4393&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">zitf.kpi.ua</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"></div></div>
+      <div class="newtab-side-margin"></div>
+    </div>
+
+    <div id="newtab-margin-bottom"></div>
+  </div>
+  <input id="newtab-customize-button" dir="ltr" value="⚙" title="Customize your New Tab page" type="button" />
+</body>
+<script type="text/javascript" src="New%20Tab_files/contentSearchUI.js"></script>
+<script type="text/javascript" src="New%20Tab_files/newTab.js"></script>
+</html>

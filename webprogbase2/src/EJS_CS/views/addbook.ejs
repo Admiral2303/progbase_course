@@ -1,0 +1,134 @@
+
+
+
+
+<html lang="en">
+    <head>
+        <title>
+            BookA
+        </title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/jquery.sticky-kit.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+        <script src="./scripts/registration.js"></script>
+        <script src="./scripts/fixed.js"></script>
+
+        <script src="./scripts/passwordconfirm.js" type="text/javascript"> </script>
+
+
+        <script src="./scripts/addbook.js" type="text/javascript"> </script>
+
+
+
+
+
+    </head>
+    <body style="background-color: #BBB7B7;">
+
+    <% include partials/header %>
+    <% include partials/login %>
+        <div class="container">
+        <form class="well form-horizontal" action=" " id="contact_form"  method="post"   enctype='multipart/form-data'>
+            <fieldset>
+                <legend>Добавити книгу</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Назва кижки</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control"  id="name" name="name" required pattern="^[А-Яа-яa-zA-Z\s]+$"  placeholder="Назва кижки" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" >Ім'я автора</label> 
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control"  id="authorname" name="authorname" required pattern="^[А-Яа-яa-zA-Z\s]+$" placeholder="Ім'я автора">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Прізвище автора</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control"  id="authorSurname" name="authorSurname" required pattern="^[А-Яа-яa-zA-Z\s]+$" placeholder="Прізвище автора">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <label class="col-md-4 control-label">Мова</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select  class="form-control" id="language" name="language"> 
+                            <option value="" disabled="" selected="" required>Виберіть мову</option>
+                                <option value="Англійська">Англійська</option>
+                                <option value="Українська">Українська</option>
+                                <option value="Російська">Російська</option>
+                                <option value="Китайська">Китайська</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <label class="col-md-4 control-label">Рік видання</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select class="form-control" id="year" name="year">
+                                <%for(let i = 1999; i <=2017; i++){%>
+                                    <option><%=i%></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Кількість сторінок</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                                <input type="number" class="form-control" min=0 id="pages" name="pages" require>            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Інформація про книгу</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea id="comment" name="content" class="form-control" required  rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Виберіть картинку</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="form-group">
+                            <input type="file"  id="ava" require name="ava" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning" >Добавити <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+
+
+    </body>
+</html>

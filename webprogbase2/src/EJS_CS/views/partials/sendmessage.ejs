@@ -1,0 +1,35 @@
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Написати повідомлення</h4>
+            </div>
+            <!-- Основная часть модального окна, содержащая форму для регистрации -->
+            <div class="modal-body">
+                <!-- Форма для регистрации -->
+                <form role="form" class="form-horizontal" action="/chat/sendMessage" method="POST">
+                    <!-- Блок для ввода логина -->
+                    <div class="form-group has-feedback">
+                        <label for="login" class="control-label col-xs-3">Введіть:</label>
+                        <div class="col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <textarea class="form-control" data-error="error" id="message" name="message" required></textarea>
+                                
+                                <input type="hidden" name="receiver_id" value=<%=book.user_id%>>
+                            </div>
+                            <span class="glyphicon form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button id="save" type="submit" class="btn btn-primary" >Відправити</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookA</title>
+  <meta name="description" content="MY FIRST SITE DESCRIPTION">
+  <meta name="author" content="Vadim Scherbina">
+ <link rel="stylesheet" type="text/css" href="/stylesheets/input.css">
+</head>
+<body> 
+<div class="form">
+<form action="/create" method="POST" enctype='multipart/form-data'>
+	<div>
+        <h3 class="name "> Назва книги</h3>
+		<input type="text" id="name" name="name" value=""/>
+	</div>
+    <div>
+        <h3 class="authorname "> Імʼя</h3>
+		<input type="text" id="authorname" name="authorname" value=""/>
+	</div>
+    <div>
+        <h3 class="authorSurname "> Прізвище</h3>
+		<input type="text" id="authorSurname" name="authorSurname" value=""/>
+	</div>
+    <div>
+        <h3 class="language "> Мова</h3>
+		<input type="text" id="language" name="language" value=""/>
+	</div>
+    <div>
+        <h3 class="year"> Рік</h3>
+		<input type="number" id="year" name="year" value=""/>
+	</div>
+	<div>
+        <h3 class="year"> Сторінки</h3>
+		<input type="number" id="pages" name="pages" value=""/>
+	</div>
+	<div>
+		<input type="file" id="ava" name="ava" />
+	</div>
+	<input type="submit" value="OK" />
+</form>
+
+<% if (book.avaname) { %>
+	<img src="/images/<%= book.avaname %>" />
+<% } else { %>
+	<span>No ava set</span>
+<% } %>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

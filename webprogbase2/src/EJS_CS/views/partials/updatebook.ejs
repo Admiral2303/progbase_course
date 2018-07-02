@@ -1,0 +1,74 @@
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Обновити інформацію</h4>
+            </div>
+            <!-- Основная часть модального окна, содержащая форму для регистрации -->
+            <div class="modal-body">
+                <form action="/books/update" method="POST">
+                    <div class="form-group ">
+                        <label for="name" class="control-label">Назва кижки</label>
+                        <input type="text" class="form-control"  id="name" name="name" required pattern="^[А-Яа-яa-zA-Z\s]+$"  placeholder="Назва кижки" value=<%=book.name%> >
+                    </div>
+                    <div class="form-group">
+                        <label for="authorname">Ім'я автора</label>
+                        <input type="text" class="form-control"  id="authorname" name="authorname" required pattern="^[А-Яа-яa-zA-Z\s]+$" placeholder="Ім'я автора" value=<%=book.authorname%>>
+                    </div>
+                    <div class="form-group">
+                        <label for="authorSurname">Прізвище автора</label>
+                        <input type="text" class="form-control"  id="authorSurname" name="authorSurname" required pattern="^[А-Яа-яa-zA-Z\s]+$" placeholder="Прізвище автора" value=<%=book.authorSurname%>>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select  class="form-control" id="language" name="language" value=<%=book.language%>> 
+                           <option selected="selected">
+                            <%=book.language %>
+                            </option>
+                            <option value="Англійська">Англійська</option>
+                            <option value="Українська">Українська</option>
+                            <option value="Російська">Російська</option>
+                            <option value="Китайська">Китайська</option>
+                        </select>
+                            
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Рік видання</label>
+                        <select class="form-control" id="year" name="year">
+                        <%for(let i = 1999; i <=2017; i++){%>
+                        <option selected="selected">
+                        <%=( book.year )%>
+                        </option>
+                        <option><%=i%></option>
+                    <% } %>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">Кількість сторінок</label>
+                        <input type="number" class="form-control" min=0 id="pages" name="pages" required value=<%=book.pages%>>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Інформація про книгу</label>
+                        <textarea id="content" name="content" class="form-control" required  rows="5"><%=book.content%></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Зберегти" />
+                    </div>
+                    <input type="hidden" name="book_id" value="<%=book._id%>">
+                </form>
+                <form action="/books/updateBookAva" method="POST" enctype='multipart/form-data'>
+                    <div class="form-group">
+                        <label for="ava">Виберіть картинку</label>
+                        <input type="file"  id="ava" require name="ava" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Завантажити картинку" />
+                    </div>
+                    <input type="hidden" name="book_id" value="<%=book._id%>">
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>

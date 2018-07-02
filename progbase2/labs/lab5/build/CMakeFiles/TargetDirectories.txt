@@ -1,0 +1,8 @@
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/install.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/list_install_components.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/rebuild_cache.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/edit_cache.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/profecionals.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/lab5.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/install/strip.dir
+/home/vadim/projects/progbase2/labs/lab5/build/CMakeFiles/install/local.dir

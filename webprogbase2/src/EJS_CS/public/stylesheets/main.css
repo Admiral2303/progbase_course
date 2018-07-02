@@ -1,0 +1,13 @@
+body {
+    background-image: url("../images/page-bg-1.jpg");
+}
+
+.content {
+    font-family: "Century Schoolbook L";
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.container {
+    margin-top: 10%;
+}

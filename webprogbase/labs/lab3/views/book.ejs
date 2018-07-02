@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookA</title>
+  <meta name="description" content="MY FIRST SITE DESCRIPTION">
+  <meta name="author" content="Vadim Scherbina">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/bookstyle.css">
+</head>
+<body>  
+    <nav class="navbar">
+        <img src="../images/book.png" width="30" height="30" alt="book">
+        <a class="navbar-link" href="/">BookA</a>
+    </nav>
+
+    <div class="book">  
+            <a href="books/garry.html"><img src="/images/<%=book.image %>" alt="Garry Potter" class="info-img"></a>
+            <h1 class="book-name-info"><%=book.name %></h1>
+              <div class="info">
+                <h3> 
+                  Автор - <%= book.authorName %> <%= book.authorSurname %><br>
+                  Язык издания - <%= book.language %><br>
+                  Количество страниц - <%= book.pages %><br>
+                  Год выпуска - <%= book.year %><br>
+                  Дата добавления - <%= book.date %><br>
+                </h3> 
+              </div>  
+              
+              <h2 class="book-description">Описание</h2>
+              <div class="all_information_about_book">
+                  <p>
+                    <%=book.content %>
+                  </p>
+              </div> 
+          </div>
+          <a class="button2" href="/books">Books</a>
+</body>
+</html>

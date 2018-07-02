@@ -1,0 +1,72 @@
+body {
+    align-self: center;
+    /* background-color: #3A3030; */
+    background-image: url(../images/fon6.jpg);
+}
+
+.info-img {
+    margin-top: 0px;
+    border-radius: 25px;
+    margin-left: 200px;
+    float: left;
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.book-name-info {
+    /* color: #110E0E; */
+    font-size: 65px;color: white;text-shadow: 0.25cm 0.25cm 0.25cm #000000;
+}
+
+.book-description {
+    position: relative;
+    margin-left: 550px;
+    font-size: 45px;  color: #030202;text-shadow: 0.25cm 0.25cm 0.25cm #545353;
+}
+
+.all_information_about_book {
+    font-family: "Century Schoolbook L";
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+.info {
+    position: relative;
+    margin-top: -35px;
+    top: 40px;
+    margin-left: 750px;
+    margin-bottom: 250px;
+    /* color: #030202;
+    margin-left: 45px;
+    margin-right: 700px;
+    font-family: ‘Monotype Corsiva’, cursive;
+    font-size: 19px;
+    padding-left: -100px;
+    left: 60px;
+    top:0px;  
+    position: relative;
+    text-align: left; */
+}
+
+table#list td {
+    text-align: left;
+    font-weight: lighter;
+}
+
+.delete {
+    margin-top: -20%;
+    margin-left: 65%;
+}
+
+
+/* .list{
+    position: relative;
+    margin-top: -35px;
+    top:40px;
+    margin-left: 650px;
+} */

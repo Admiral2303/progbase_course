@@ -1,0 +1,25 @@
+body {
+    font: 300 15px/23px "Roboto Slab", sans-serif;
+    color: #2D2B2B;
+    background-image: url("../images/page-bg-1.jpg");
+}
+
+h1 {
+    font: 300 15px/23px "Roboto Slab", sans-serif;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 33px;
+    line-height: normal;
+}
+
+.line {
+    color: black;
+}
+
+.img {
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+}

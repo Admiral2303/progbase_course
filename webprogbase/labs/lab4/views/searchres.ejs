@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Books</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width" /> 
+<meta name="author" content="Vadim Scherbina">
+<link rel="stylesheet" type="text/css" href="/stylesheets/booksstyle.css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse bg-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="col-md-4 col-md-offset-4">
+        <a href="\" class="navbar-brand">BookA</a>
+      </div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="search">Search</a></li>
+      <li><a href="form">Add</a></li>
+      <li><a href="books?page=1">Books</a></li>
+    </ul>
+  </div>
+</nav> 
+
+
+
+<%if(books.length != 0){%>
+
+  <%if(searchReq !== ""){%>
+  <div class = "search">
+    <h1>Ви шукали:  <%=searchReq%> </h1>
+  </div>
+  <% } %>
+
+    <%for(let book of books){%>
+            <li>
+                <div class="book">
+                    <a href="books/<%=book.id %>"><img src="/images/<%= book.image%>" alt="<%=book.name%>" class="img"></a>
+                    <h1 class="book-name" style="font-family: 'Century Schoolbook L', bold;font-size: 40px;font-weight: 600">
+                        <%= book.name %>
+                    </h1>
+                    <div class="book-info">
+                        <h3 style="font-family: 'Century Schoolbook L', bold;font-size: 20px;font-weight: 600">
+                            Автор -
+                            <%= book.authorName %>
+                                <%= book.authorSurname %><br> Язык издания -
+                                    <%= book.language %><br> Количество страниц -
+                                        <%= book.pages %><br> Год выпуска -
+                                            <%= book.year %><br> Дата добавления -
+                                                <%= book.date %><br>
+                        </h3>
+                    </div>
+                    <hr class="line">
+                </div>
+            </li>
+            <% } %>
+
+<% } else{ %>
+<div class="error">
+  <h1>По запиту  "<%=searchReq%>" нічого не було знайдено </h1>
+</div>
+
+<% }%>
+
+    
+ 
+
+
+<form id="search" action="/searchbook" method="get">
+    <%if(page != 1){%>  
+        <a class="prev" href="?page=<%=parseInt(page) - 1 %>&name=<%=searchReq%>">
+            <button type="button" class="btn btn-secondary"><</button>
+        </a>
+    <%}%>
+    <%for(let i = 1;  i <= pages; i++){%>
+        <input type="submit" class="btn btn-secondary"  id="page" name="page" value="<%=i %>">
+    <% } %> 
+    <%if(page != pages){%>  
+        <a class="next" href="?page=<%=parseInt(page) + 1 %>&name=<%=searchReq%>">
+            <button type="button" class="btn btn-secondary">></button>
+        </a>
+    <%}%>
+    <input type="hidden" name="name" value="<%=searchReq%>">
+</form>    
+
+
+<div class="number">
+      <h1> <%=parseInt(page) %></h1>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

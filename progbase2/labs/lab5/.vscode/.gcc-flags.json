@@ -1,0 +1,5 @@
+{
+    "execPath": "/usr/bin/gcc",
+    "gccDefaultCFlags": "-c -std=c99 -Wall -Werror -pedantic-errors",
+    "gccSuppressWarnings": false
+}

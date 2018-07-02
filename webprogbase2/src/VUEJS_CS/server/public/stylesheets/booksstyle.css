@@ -1,0 +1,86 @@
+body {
+    align-self: center;
+    background-image: url(../images/fon6.jpg);
+    overflow-x: hidden;
+}
+
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+.img {
+    border-radius: 25px;
+    /* float: center; */
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 20%;
+}
+
+.img:hover {
+    transform: scale(1.3);
+}
+
+.book {
+    position: relative;
+    top: 20px;
+    left: 350px;
+    display: block;
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.book-name {
+    color: #110E0E;
+    margin-left: 50px;
+    margin-right: 700px;
+    position: relative;
+    top: 50px;
+}
+
+.book-info {
+    display: block;
+    /* font-family: ‘Monotype Corsiva’, cursive;
+    font-size: 16px; */
+    color: #080606;
+    border: 2px solid #333;
+    left: 0px;
+    top: 40px;
+    text-align: left;
+}
+
+.search {
+    margin-top: 6%;
+    margin-left: 40%;
+}
+
+.error {
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+.btn-toolbar {
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+.number {
+    margin-left: 95%;
+    margin-top: -4%;
+}
+
+#search {
+    margin-top: 4%;
+    margin-left: 45%;
+}
+
+
+/* #footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+} */

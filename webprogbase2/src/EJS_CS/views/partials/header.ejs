@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">BookA</a>
+        </div>
+        <ul class="nav navbar-nav hidden-sm hidden-xs">
+            <% if (user) { %>
+                <li><a href="/books?page=1">Книги</a></li>
+                <li><a href="/chat">Переписка</a></li>
+                <li><a href="/books/create"> Створити</a> </li>
+                <li><a href="/books/userbooks?page=1">Мої книги</a></li>
+                <% }else{ %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Авторизація</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-log-in"></span> Регістрація</a></li>
+            <% } %>
+        </ul>
+        <% if (user) { %>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown" aria-expanded="false">
+                        <span><%=user.name%></span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/books?page=1" class="visible-sm visible-xs">Книги</a></li>
+                        <li><a href="/chat" class="visible-sm visible-xs">Переписка</a></li>
+                        <li><a href="/books/create" class="visible-sm visible-xs"> Створити</a> </li>
+                        <li><a href="/books/userbooks?page=1" class="visible-sm visible-xs">Мої книги</a></li>
+                        <%if(user.role == "admin"){%>
+                            <li><a href="/users" >Користувачі</a></li>
+                            <% } %>
+                                <li><a href="/profile"><span class="glyphicon glyphicon-user"></span>Профіль</a></li>
+                                <li><a href="/books/userbookmarks?page=1"><span class="glyphicon glyphicon-certificate"></span>Закладки</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Вийти</a></li>
+                                <li><a href="/help"><span class="glyphicon glyphicon-info-sign"></span> Допомога</a></li>
+                                
+                    </ul>
+                </li>
+            </ul>
+            <% } %>
+    </div>
+</nav>

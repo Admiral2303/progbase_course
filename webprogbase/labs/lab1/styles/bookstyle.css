@@ -1,0 +1,160 @@
+
+
+body{
+    align-self: center;   
+    background-color: #3A3030;
+    background-image: url("../images/fon6.jpg");
+}
+
+
+
+    
+    
+    
+    
+
+    
+  
+
+.info-img{
+    margin-top: 0px;
+    border-radius: 25px;
+    margin-left: 200px; 
+    float: left;
+    max-height: 450px;
+    max-width: 450px;
+
+}
+.book-name-info{
+    /* color: #110E0E; */
+    font-size: 65px;
+    margin-left: 750px;
+    margin-top:80px;
+    color:white;
+    text-shadow: 0.25cm 0.25cm 0.25cm #000000;
+}
+
+.book-description{
+    position: relative;
+    margin-left: 550px;
+    font-size: 45px;
+    
+    top: 20px;
+    color:#0D0C0C;
+    text-shadow: 0.25cm 0.25cm 0.25cm #908C8C;
+}
+.all_information_about_book{
+    font-family: "Century Schoolbook L";
+    color:#000000;
+    /* text-shadow: 0.25cm 0.25cm 0.25cm #363434; */
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 100px;
+
+}
+
+
+.info{
+    position: relative;
+    margin-top: -35px;
+    top:40px;
+    margin-left: 750px;
+    margin-bottom: 250px;
+    /* color: #030202;
+    margin-left: 45px;
+    margin-right: 700px;
+    font-family: ‘Monotype Corsiva’, cursive;
+    font-size: 19px;
+    padding-left: -100px;
+    left: 60px;
+    top:0px;  
+    position: relative;
+    text-align: left; */
+}
+
+
+table#list td {
+    text-align: left;
+    font-weight: lighter;
+    
+}
+
+
+
+
+
+
+/* .list{
+    position: relative;
+    margin-top: -35px;
+    top:40px;
+    margin-left: 650px;
+} */
+
+.navbar{
+    top: 0;
+    left: 0px;
+    height: 44px;
+    width: 100%;
+    margin: 0;
+    color: #3E3838;
+    background: linear-gradient(to top, #10100F, #030302);
+    user-select: none;
+    position: fixed; 
+    text-align: center;
+    border: 2px solid #333;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    font-variant: small-caps;   
+}
+
+.navbar-link {
+    color: #3E3838;
+    font: 100 40px 'Raleway', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+a.button2 {
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    font-size: 28.5px;
+    position: fixed;
+    top:2px;
+    left: 0px;
+    color: rgb(205,216,228);
+    text-decoration: none;
+    padding: .2em .8em;
+    outline: none;
+    border-right: 1px solid rgba(19, 20, 20, 0.50);
+    border-top: 1px solid rgba(270,278,287,.01);
+    background-color: rgb(17, 18, 19);
+    background-image:
+    radial-gradient(1px 60% at 0% 50%, rgba(23, 21, 21, 0.30), transparent),
+    radial-gradient(1px 60% at 100% 50%, rgba(15, 13, 13, 0.30), transparent),
+    linear-gradient(rgb(17, 18, 18), rgb(10, 10, 11));
+}
+a.button2:hover {
+    background-image:
+    radial-gradient(1px 60% at 0% 50%, rgba(255, 255, 255, 0.30), transparent),
+    radial-gradient(1px 60% at 100% 50%, rgba(255, 249, 249, 0.30), transparent),
+    linear-gradient(rgb(51,60,67), rgb(58,65,72));
+}
+a.button2:focus {
+    color: rgb(245,247,250);
+    border-top: 1px solid rgb(67,111,136);
+    background-image:
+    linear-gradient(rgb(46,95,122), rgb(36,68,92));
+}
+a.button2:focus:hover {
+    border-top: 1px solid rgb(49,87,107);
+    background-image:
+    linear-gradient(rgb(33,77,98), rgb(29,57,77));
+}

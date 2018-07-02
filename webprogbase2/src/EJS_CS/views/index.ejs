@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+    
+
+    
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+
+
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/fixed.js"></script>
+    <script src="./scripts/register.js"></script>
+     <script>
+        function myFunction() {
+            alert("Користувач з таким логіном вже зареєстрований");
+        }
+    </script>
+</head>
+
+<body>
+<% include partials/header %>
+<% include partials/login %>
+<% include partials/register %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 content">
+                Онлайн сервіс оренди книг “BookA” - це сайт на якому кожна людина, яка навчається в будь-якому навчальному закладі може виставити свою книгу в оренду. В більшості університетів або шкіл потрібно купувати книги для навчання, які буває коштують значних
+                    грошей, але після року навчання ця книга вам уже не потрібна, тому мій веб-сайт допоможе повернути собівартість даної книги і навіть заробити на ній. Після того як у вас закінчилось навчання по певній книзі ви можете виставити її в оренду.
+            </div>  
+            <div class="col-md-12 ">
+                <div class="navbar navbar-inverse navbar-fixed-bottom" >
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-3" style="color:black;">     
+                                Create by Admiral23  
+                                <img src="./images/logo4.png" width="78" height="78" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <%if(error == "1") {%>
+           <script>
+            myFunction();
+        </script>
+
+        <% } %>
+        
+            
+       
+        
+    </div>    
+
+
+
+
+    
+    
+ 
+
+
+
+
+    
+</body>
+</html>

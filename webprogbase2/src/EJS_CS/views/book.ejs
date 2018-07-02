@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+    <script src="./scripts/registration.js"></script>
+    <script src="./scripts/fixed.js"></script>
+    <script src="./scripts/passwordconfirm.js" type="text/javascript">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <!-- Optional theme -->
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/book.css">
+
+
+    <script src="./scripts/sendmessage.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <% include partials/header %>
+        <% include partials/sendmessage %>
+            <% include partials/updatebook %>
+
+                <div id="content" class="col-md-12 product_page">
+                    <div class="row product-content-columns">
+                        <div class="col-md-5 col-md-offset-1 product_page-left">
+                            <img src="data:jpg;base64,<%=book.image.toString('base64')%>" alt="Garry Potter" style="height: 70%; width:70%;max-height: 450px; max-width: 450px;border-radius: 25px;">
+                        </div>
+                        <div class="col-md-5 product_page-right">
+                            <div class="general_info product-info">
+                                <h1 class="product-title">
+                                    <%=book.name%>
+                                </h1>
+                                <div class="rating-section product-rating-status">
+                                    <div class="rating">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>Автор: <%=book.authorname%> <%=book.authorSurname%>  </span><br>
+                                    <span>Рік: <%=book.year%></span><br>
+                                    <span>Мова: <%=book.language%></span><br>
+                                    <span>Кількість сторінок: <%=book.pages%></span><br> <br>
+                                </div>
+                                <% if(book.user_id == user._id || user.role == "admin"){%>
+                                    <form action="/books/delete/<%=book._id %>" method="POST">
+                                        <input class="btn btn-primary" type="submit" value="Видалити">
+                                    </form>
+                                    <a href="#" data-toggle="modal" data-target="#myModal3"> <button type="submit">Обновити інформацію</button></a>
+                                    <% } %>
+                            </div>
+                            <div>
+                                <p> Виклав: </p>
+                                <a href="/profile/<%=postcreator._id%>  "><img src="data:<%=postcreator.mimetype%>;base64,<%=postcreator.image.toString('base64')%>" alt="<%= postcreator.name %>" class="img"></a>
+                                <span><%=postcreator.name%></span>
+                                <a href="#" data-toggle="modal" data-target="#myModal2"> <button type="submit">Написати автору</button></a>
+                                <%if(!bookmark){%>
+                                    <form action="/users/addbookmark/<%=book._id %>" method="POST">
+                                        <div class="bookmark">
+                                            Добавити в закладки:
+                                            <button type="submit"><img src="/images/star.png" style="width:50%; height:50%; max-width:50px;max-height:45px;"></button>
+                                        </div>
+                                    </form>
+                                    <% } else{%>
+                                        <form action="/users/deletebookmark/<%=book._id %>" method="POST">
+                                            <div class="bookmark">
+                                                Видалити з закладок:
+                                                <button type="submit"><img src="/images/star1.png" style="width:50%; height:50%; max-width:50px;max-height:45px;"></button>
+                                            </div>
+                                        </form>
+                                        <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="product-section_title">Опис книги</h3>
+                    <p>
+                        <%=book.content%>
+                    </p>
+
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <form class="form-horizontal" action="/books/addcoment" method="POST">
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="comment">Ваш коментар</label>
+                                <div class="col-md-5">
+                                    <textarea name="comment" rows="5" id="comment" class="form-control" required></textarea>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="hidden" name="book_id" value=<%=book._id%> />
+                                    <input type="submit" class="btn btn-primary " value="OK" />
+                                </div>
+                            </div>
+
+                            <%for(let coment of book.coments){ %>
+                                <%for(let User of coment_users){ %>
+                                    <%if(coment.user_id == User._id){%>
+                                        <div class="review-item">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="review-author"><strong> Comment</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 ">
+                                                    <img src="data:<%=User.mimetype%>;base64,<%=User.image.toString('base64')%>" alt="<%= User.name %>" class="img">
+                                                </div>
+                                                <div class="col-md-1 ">
+                                                    <div class="review-date">
+                                                        <%=User.name%>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-9 text-center">
+                                                    <%=coment.text%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="line">
+                                        <%break; %>
+                                            <% } %>
+                                                <% } %>
+                                                    <% }%>
+                        </form>
+                    </div>
+                </div>
+
+</body>
+
+</html>

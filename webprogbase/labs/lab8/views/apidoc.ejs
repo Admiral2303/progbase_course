@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <!-- Latest compiled and minified CSS -->
+   <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+
+
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bookstyle.css">
+</head>
+
+<body>
+<% include partials/header %>
+
+<div class="container">
+
+    <div class="row">
+        
+        <div class="col-md-10 col-md-offset-1">
+            <div id="jumbo" class="jumbotron h-center ">
+				<div class="container abs-content">
+						<div>
+							<div class="media-left media-middle hidden-xs">
+								<img class="media-object" src="/images/logo4.png" alt="ProgBase logo" width="128">
+							</div>
+							<div class="media-body" style="border-left: 4px solid #ddd; padding-left: 30px;">
+								<h1 data-toc-skip="">API<sup><small></small></sup></h1>
+								<p>Можливості доступу до ресурсів сайту</p>
+							</div>
+						</div>
+				</div>
+                <hr>
+                </br></br></br>
+                <div class="modal-dialog">
+                    <h2>Api v1 </h2>         
+                    <h4>Весь доступ до API відбувається через URL "/api/v1". Всі дані відправляються і отримуються у форматі JSON. </h4>
+                    <hr>
+                    <h3>Доступ до Api </h3>
+                    <pre>GET localhost:port/api/v1/ </pre>
+                    <h5>Повертає всі доступні функції </h5>
+                    </br>
+                    <h3>Аутентифікація</h3>
+                    <h4>Базова аутентифікація</h4>
+                    <h5>Отримати список книг можливо без аутентифікації, але щоб добавити книгу потрібна базова аутентифікація.</h5>
+                    </br>
+                    <h5>Логіном і паролем слугують логін і пароль зареєстрованого користувача сайту</h5>
+                    </br>
+                    <h5>Якщо запит на додавання книги не буде містити логіна і пароля, то відповіддю буде статус 401 Unauthorized</h5>
+                    </br>
+                    <h5>Отримати список користувачів і видаляти книги може тільки адмін. При доступі юзера в якого роль не буде адмін буде статус </h5>
+                    </br>
+                    <h3>Книги</h3>
+                    <h4>Cписок всіх книг</h4>
+                    <pre style="color:red">GET localhost:port/api/v1/books </pre>
+                    <h4>Для книг можлива фільтрація і пагінація</h4>
+                    <h5>Пагінація відбувається по сторінкам на кожній сторінці розміщується по 2 книги</h4>
+                    <pre style="color:red">GET localhost:port/api/v1/books?page= </pre>
+                    <pre>
+{
+    "books": [
+        {
+            "_id": "5a211629c5a9a214b2db8782",
+            "name": "Sdsdsss",
+            "authorname": "ssss",
+            "authorSurname": "sadsad",
+            "year": "1999",
+            "pages": "222",
+            "language": "Англійська",
+            "image": "https://res.cloudinary.com/booka-herokuapp-com/image/upload/v1512117801/jppgztkus6qpsyrcybgi.png",
+            "date": "1512117800289",
+            "content": "dsfdsf",
+            "__v": 0
+        }
+    ],
+    "pages": 2
+}
+                    </pre>
+                    <h5>Фільтрація відбувається по будь-якому з параметрів, також їх можна комбінувати для точності пошуку</h4>
+                    <pre style="color:red">GET localhost:port/api/v1/books?name=... ?authorname=... 
+?authorSurname=...  ?year=... ?language=...</pre>
+                    <pre>
+{
+    "books": [
+        {
+            "_id": "5a20494001df121c1e8d80e6",
+            "name": "dsfdsf",
+            "authorname": "dsfdsf",
+            "authorSurname": "dsffdsf",
+            "year": "1999",
+            "pages": "333",
+            "language": "Українська",
+            "image": "https://res.cloudinary.com/booka-herokuapp-com/image/upload/v1512065344/ziwnagopyetrsjh1flyi.png",
+            "date": "1512065341603",
+            "content": "dsfdsf",
+            "__v": 0
+        }
+    ],
+    "pages": 1
+}
+                    </pre>
+                    <h4>Добавити нову книгу</h4>
+                    <h5>В тілі потрібно передати книгу в якій обовязково мають буди заповнені поля</h5>
+                    <ul>
+                        <li>name</li>
+                        <li>authorname</li>
+                        <li>authorSurname</li>
+                        <li>year</li>
+                        <li>pages</li>
+                        <li>language</li>
+                        <li>image</li>
+                        <li>content</li>
+                    </ul>
+                    <pre style="color:red">POST localhost:port/api/v1/books/create</pre>
+                    <h4>Отримати книгу по її id</h4>
+                    <pre style="color:red">GET localhost:port/api/v1//books/:id</pre>
+                    <h4>Видалити книгу по її id</h4>
+                    <pre style="color:red">DELETE localhost:port/api/v1//books/:id</pre>
+                    <pre>
+{
+    "ok": 1,
+    "n": 1
+}
+                    </pre>
+                    <h3>Користувачі</h3>
+                    <h4>Cписок всіх користувачів</h4>
+                    <pre style="color:red">GET localhost:port/api/v1/users </pre>
+                    <pre>
+[
+    {
+        "_id": "5a204110b13ff313c52894f7",
+        "name": "sdfdsfdsf",
+        "login": "1",
+        "password": "ee7368ea63b97afd5e388131ff13295a8fa840711d0961d3e21c6ed3a3d7f6f0d6d53f3a27b54f67b5b02f4eb6ce71cb9201347488fa66d72df35eb6fc465eb6",
+        "role": "user",
+        "year": "1950",
+        "email": "sdfsf@dfgfg.rt",
+        "image": "https://res.cloudinary.com/booka-herokuapp-com/image/upload/v1512063247/gpqwnqfkusaipfqgfbmg.png",
+        "__v": 0
+    },
+    {
+        "_id": "5a206d9e37746d392be36d04",
+        "name": "admin",
+        "login": "admin",
+        "password": "49a6f7ca2dffa4de60b27fe0c9333da2c422783a6f69ba59ca6a3f77f36032ba53363d394b1cdbf466fdb48e8c91beec30766a53deab307eebb63cd91c322121",
+        "role": "admin",
+        "year": "1950",
+        "email": "admin@dfdf",
+        "image": "https://res.cloudinary.com/booka-herokuapp-com/image/upload/v1512074655/xcxcjrrac4ik4q61e5gs.png",
+        "__v": 0
+    }
+]
+                    </pre>
+                    <h4>Добавити нового користувача</h4>
+                    <h5>В тілі потрібно передати користувача в якого обовязково мають буди заповнені поля</h5>
+                    <ul>
+                        <li>name</li>
+                        <li>login</li>
+                        <li>password</li>
+                        <li>year</li>
+                        <li>email</li>
+                        <li>image</li>
+                    </ul>
+                    <pre style="color:red">POST localhost:port/api/v1/users/create</pre>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+      
+
+
+
+
+
+
+</body>
+
+</html>

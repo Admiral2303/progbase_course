@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+    
+
+    
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
+    
+
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/fixed.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/passwordconfirm.js" type="text/javascript"> </script>
+
+
+
+</head>
+
+<body>
+
+
+    <% include partials/header %>
+    <div class="container-fluid"
+      <div class="row">
+        <div class="col-md-1 col-md-offset-0">
+          Користувачі<hr>
+          <% for(let User of users){%>
+              <a href="/chat/<%=User._id%>"><img src="data:<%=User.mimetype%>;base64,<%=User.image.toString('base64')%>" alt="<%= User.name %>" class="img"></td></a>
+                <%=User.name%> 
+                <hr color="black">
+          <% } %>
+          </div>
+    
+          
+          <div class="col-md-10">
+          <%if(messages){%>
+            <table>
+              <tr>
+                <td>Користувач</td>
+                <td>Повідомлення</td>
+                <td>Дата</td>
+              </tr>
+              <% for(let message of messages){%>
+                  <tr>
+                  <%if(message.sender_id == user._id){ %>
+                    <td><%=user.name%></td>
+                  <% } else{%>
+                    <td><%=receiver.name%></td>
+                  <% } %>  
+                    <td><%=message.data%></td>
+                    <td><%=message.date%></td>
+                  </tr>
+                <% } %>
+            </table>
+            <form action="/chat/sendMessage" method="POST">
+              <input type="text" name="message" id="message"> 
+              <input type="submit" value="Отправить">
+              <input type="hidden" name="receiver_id" value=<%=receiver._id%> >
+            </form>
+          <% } %>
+          </div>
+        </div>
+    </div>
+
+   
+    
+
+
+
+
+</body>
+</html>

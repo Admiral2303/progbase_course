@@ -1,0 +1,28 @@
+<% } %>
+            <%if(i == 3*n){ %>
+                <div class="col-md-3 col-md-offset-3 col-xs-12 ">
+                    <a href="/books/<%=book.id %>"><img src = "data:<%=book.mimetype%>;base64,<%=book.image.toString('base64')%>" alt="<%= book.name %>" class="img"></a>           
+                    <div class="row"> 
+                        <div class="col-md-10 text-center" style="font-family: 'Oswald', sans-serif;font-weight: normal;text-transform: uppercase;">
+                            <h2 class="book-name">{{book.name}} </h2>
+                            <h3 class="book-info" >
+                                    Автор - {{ book.authorName }} {{ book.authorSurname}}<br> 
+                                    Год выпуска - {{book.year}}<br> 
+                            </h3>
+                        </div>
+                    </div> 
+                </div>
+            <% n++; %>
+            <% }else if(i >3 && i !=3*n){ %>
+            <div class="col-md-3 col-xs-12">
+                <a href="/books/<%=book.id %>"><img src = "data:<%=book.mimetype%>;base64,<%=book.image.toString('base64')%>" alt="<%= book.name %>" class="img"></a>           
+                <div class="row"> 
+                    <div class="col-md-10 text-center" style="font-family: 'Oswald', sans-serif;font-weight: normal;text-transform: uppercase;">
+                        <h2 class="book-name">{{book.name}} </h2>
+                        <h3 class="book-info" >
+                                Автор - {{book.authorName}} {{book.authorSurname}}<br> 
+                                Год выпуска - {{book.year}}<br> 
+                        </h3>
+                    </div>
+                </div>
+            </div>

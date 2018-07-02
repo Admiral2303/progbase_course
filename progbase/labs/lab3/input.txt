@@ -1,0 +1,3 @@
+ingenear 2000 45.2 vasiliu petrishin 1985
+programist 4000 56.3 vasya pupkin 1986
+teacher 1500 86.3 alla zozula 1971

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/vadim/Atomproject/atomproject/lab4/build",
+  "command": "/usr/bin/cc   -I/home/vadim/Atomproject/atomproject/lab4/include -I/home/vadim/Atomproject/atomproject/lab4/usr/local/include -I/usr/include/libxml2  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   -o CMakeFiles/profecionals.dir/src/list.c.o   -c /home/vadim/Atomproject/atomproject/lab4/src/list.c",
+  "file": "/home/vadim/Atomproject/atomproject/lab4/src/list.c"
+},
+{
+  "directory": "/home/vadim/Atomproject/atomproject/lab4/build",
+  "command": "/usr/bin/cc   -I/home/vadim/Atomproject/atomproject/lab4/include -I/home/vadim/Atomproject/atomproject/lab4/usr/local/include -I/usr/include/libxml2  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   -o CMakeFiles/profecionals.dir/src/convert.c.o   -c /home/vadim/Atomproject/atomproject/lab4/src/convert.c",
+  "file": "/home/vadim/Atomproject/atomproject/lab4/src/convert.c"
+},
+{
+  "directory": "/home/vadim/Atomproject/atomproject/lab4/build",
+  "command": "/usr/bin/cc   -I/home/vadim/Atomproject/atomproject/lab4/include -I/home/vadim/Atomproject/atomproject/lab4/usr/local/include -I/usr/include/libxml2  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   -o CMakeFiles/profecionals.dir/src/function.c.o   -c /home/vadim/Atomproject/atomproject/lab4/src/function.c",
+  "file": "/home/vadim/Atomproject/atomproject/lab4/src/function.c"
+},
+{
+  "directory": "/home/vadim/Atomproject/atomproject/lab4/build",
+  "command": "/usr/bin/cc   -I/home/vadim/Atomproject/atomproject/lab4/include -I/home/vadim/Atomproject/atomproject/lab4/usr/local/include -I/usr/include/libxml2  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   -o CMakeFiles/profecionals.dir/src/menu.c.o   -c /home/vadim/Atomproject/atomproject/lab4/src/menu.c",
+  "file": "/home/vadim/Atomproject/atomproject/lab4/src/menu.c"
+},
+{
+  "directory": "/home/vadim/Atomproject/atomproject/lab4/build",
+  "command": "/usr/bin/cc   -I/home/vadim/Atomproject/atomproject/lab4/include -I/home/vadim/Atomproject/atomproject/lab4/usr/local/include -I/usr/include/libxml2  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   -o CMakeFiles/lab5.dir/main.c.o   -c /home/vadim/Atomproject/atomproject/lab4/main.c",
+  "file": "/home/vadim/Atomproject/atomproject/lab4/main.c"
+}
+]

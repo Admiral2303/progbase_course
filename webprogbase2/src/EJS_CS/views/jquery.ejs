@@ -1,0 +1,93 @@
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <meta name="description" content="MY FIRST SITE DESCRIPTION">
+    <meta name="author" content="Vadim Scherbina">
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+
+     <!-- Подлючаем библиотеку jQuery -->
+    <script src="/assets/demo/jquery/jquery-1.11.2.min.js"></script>
+    <!-- Подлючаем js файл Bootstrap -->
+    <script src="/assets/demo/bootstrap-3/js/bootstrap.min.js"></script>
+     
+    <script src="./scripts/registration.js"></script>
+    <!--...-->
+
+</head>
+
+<body>
+    <!--...-->
+    <!-- Подлючаем CSS файл Bootstrap -->
+   
+    <!--...-->
+     
+    <!-- Модальное окно -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Заголовок модального окна -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+          </div>
+          <!-- Основная часть модального окна, содержащая форму для регистрации -->
+          <div class="modal-body">
+            <!-- Форма для регистрации -->
+      	<form role="form" class="form-horizontal">
+    	  <!-- Блок для ввода логина -->
+    	  <div class="form-group has-feedback">
+    	    <label for="login" class="control-label col-xs-3">Логин:</label>
+    	    <div class="col-xs-6">
+    	      <div class="input-group">
+    	        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>         
+    	        <input type="text" class="form-control" required="required" name="login" pattern="^[А-Яа-яa-zA-Z\s]+$">
+    	      </div>
+    	      <span class="glyphicon form-control-feedback"></span>
+    	    </div>
+    	  </div>
+    	  <!-- Блок для ввода email -->
+    	  <div class="form-group has-feedback">
+    	    <label for="email" class="control-label col-xs-3">Email:</label>
+    	    <div class="col-xs-6">
+    	      <div class="input-group">
+    	        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    	        <input type="email" class="form-control" required="required" name="email">
+    	      </div>
+    	      <span class="glyphicon form-control-feedback"></span>
+    	    </div>
+    	  </div>
+              <!-- Конец блока для ввода email-->
+            </form>
+          </div>
+          <!-- Нижняя часть модального окна -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+            <button id="save" type="button" class="btn btn-primary">Регистрация</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div class="container">
+      
+      <!-- Кнопка для открытия модального окна -->
+      <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModal">
+        Регистрация
+      </button>
+    </div>   
+</body>
+</html>

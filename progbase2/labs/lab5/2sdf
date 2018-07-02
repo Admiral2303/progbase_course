@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profecionals>
+  <profecional>
+    <profname>VADIM</profname>
+    <salary>5</salary>
+    <score>5.300000</score>
+    <name>DSDEF</name>
+    <surname/>
+    <year>5.300000</year>
+  </profecional>
+  <profecional>
+    <profname>defe</profname>
+    <salary>54</salary>
+    <score>5.300000</score>
+    <name>dsfsd</name>
+    <surname>sdfd</surname>
+    <year>5.300000</year>
+  </profecional>
+</profecionals>

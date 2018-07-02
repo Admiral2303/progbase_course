@@ -1,0 +1,19 @@
+{
+  "name": "routers_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js --ignore 'b.json'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "busboy-body-parser": "^0.3.0",
+    "ejs": "^2.5.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
+    "read": "^1.0.7"
+  }
+}

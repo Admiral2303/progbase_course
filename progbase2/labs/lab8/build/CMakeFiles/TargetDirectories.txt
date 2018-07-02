@@ -1,0 +1,3 @@
+/home/vadim/projects/progbase2/labs/lab8/build/CMakeFiles/edit_cache.dir
+/home/vadim/projects/progbase2/labs/lab8/build/CMakeFiles/rebuild_cache.dir
+/home/vadim/projects/progbase2/labs/lab8/build/CMakeFiles/json.dir

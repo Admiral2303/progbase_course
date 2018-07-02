@@ -1,0 +1,147 @@
+\hypertarget{jsonconverter_8h}{}\section{include/jsonconverter.h File Reference}
+\label{jsonconverter_8h}\index{include/jsonconverter.\+h@{include/jsonconverter.\+h}}
+
+
+Module to convert data to Json string.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}places.\+h\char`\"{}}\\*
+Include dependency graph for jsonconverter.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{jsonconverter_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{jsonconverter_8h_a9b4369d668f311c1f5fcdc600956281a}{server\+Information} (string servername, string developer)
+\begin{DoxyCompactList}\small\item\em get server information \end{DoxyCompactList}\item 
+string \hyperlink{jsonconverter_8h_a6ed6ea0595329e4606cb4d7fcf4cb6db}{my\+Favourite\+Places} (vector$<$ \hyperlink{classPlaces}{Places} $\ast$ $>$ place)
+\begin{DoxyCompactList}\small\item\em get all places in Json fromat \end{DoxyCompactList}\item 
+string \hyperlink{jsonconverter_8h_ad38a7250e0295df6f6057b4dde1a49f4}{location\+Place} (vector$<$ \hyperlink{classPlaces}{Places} $\ast$ $>$ place, string message)
+\begin{DoxyCompactList}\small\item\em get information about my favourites places with some location \end{DoxyCompactList}\item 
+string \hyperlink{jsonconverter_8h_a3f8e63cd7d4edd3c7108eae9acf74aec}{id\+Place} (vector$<$ \hyperlink{classPlaces}{Places} $\ast$ $>$ place, string message)
+\begin{DoxyCompactList}\small\item\em get information about my favourites places with some id \end{DoxyCompactList}\item 
+string \hyperlink{jsonconverter_8h_a6bb4a7d88b588add9c542426d5a2fe10}{file\+Information} ()
+\begin{DoxyCompactList}\small\item\em Take data from file. \end{DoxyCompactList}\item 
+string \hyperlink{jsonconverter_8h_a7160388c00905eb853fc867ca9d31ca5}{file\+Letters} ()
+\begin{DoxyCompactList}\small\item\em Calculate letters in Upper register and in Lower. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module to convert data to Json string. 
+
+
+
+\subsection{Function Documentation}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!file\+Information@{file\+Information}}
+\index{file\+Information@{file\+Information}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{file\+Information()}{fileInformation()}}]{\setlength{\rightskip}{0pt plus 5cm}string file\+Information (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_a6bb4a7d88b588add9c542426d5a2fe10}{}\label{jsonconverter_8h_a6bb4a7d88b588add9c542426d5a2fe10}
+
+
+Take data from file. 
+
+\begin{DoxyReturn}{Returns}
+json string which contains information about file size, file name and file data 
+\end{DoxyReturn}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!file\+Letters@{file\+Letters}}
+\index{file\+Letters@{file\+Letters}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{file\+Letters()}{fileLetters()}}]{\setlength{\rightskip}{0pt plus 5cm}string file\+Letters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_a7160388c00905eb853fc867ca9d31ca5}{}\label{jsonconverter_8h_a7160388c00905eb853fc867ca9d31ca5}
+
+
+Calculate letters in Upper register and in Lower. 
+
+\begin{DoxyReturn}{Returns}
+information about letters in Upper register and in Lower 
+\end{DoxyReturn}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!id\+Place@{id\+Place}}
+\index{id\+Place@{id\+Place}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{id\+Place(vector$<$ Places $\ast$ $>$ place, string message)}{idPlace(vector< Places * > place, string message)}}]{\setlength{\rightskip}{0pt plus 5cm}string id\+Place (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Places} $\ast$ $>$}]{place, }
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_a3f8e63cd7d4edd3c7108eae9acf74aec}{}\label{jsonconverter_8h_a3f8e63cd7d4edd3c7108eae9acf74aec}
+
+
+get information about my favourites places with some id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & -\/ the vector with my favourite places \\
+\hline
+{\em message} & -\/ H\+T\+TP request to server \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+json string which contains information about place with selected id 
+\end{DoxyReturn}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!location\+Place@{location\+Place}}
+\index{location\+Place@{location\+Place}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{location\+Place(vector$<$ Places $\ast$ $>$ place, string message)}{locationPlace(vector< Places * > place, string message)}}]{\setlength{\rightskip}{0pt plus 5cm}string location\+Place (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Places} $\ast$ $>$}]{place, }
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_ad38a7250e0295df6f6057b4dde1a49f4}{}\label{jsonconverter_8h_ad38a7250e0295df6f6057b4dde1a49f4}
+
+
+get information about my favourites places with some location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & -\/ the vector with my favourite places \\
+\hline
+{\em message} & -\/ H\+T\+TP request to server \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+json string which contains information about selected places 
+\end{DoxyReturn}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!my\+Favourite\+Places@{my\+Favourite\+Places}}
+\index{my\+Favourite\+Places@{my\+Favourite\+Places}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{my\+Favourite\+Places(vector$<$ Places $\ast$ $>$ place)}{myFavouritePlaces(vector< Places * > place)}}]{\setlength{\rightskip}{0pt plus 5cm}string my\+Favourite\+Places (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Places} $\ast$ $>$}]{place}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_a6ed6ea0595329e4606cb4d7fcf4cb6db}{}\label{jsonconverter_8h_a6ed6ea0595329e4606cb4d7fcf4cb6db}
+
+
+get all places in Json fromat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & -\/ vector of my favourites \hyperlink{classPlaces}{Places} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string in Json format that contain information about all places 
+\end{DoxyReturn}
+\index{jsonconverter.\+h@{jsonconverter.\+h}!server\+Information@{server\+Information}}
+\index{server\+Information@{server\+Information}!jsonconverter.\+h@{jsonconverter.\+h}}
+\subsubsection[{\texorpdfstring{server\+Information(string servername, string developer)}{serverInformation(string servername, string developer)}}]{\setlength{\rightskip}{0pt plus 5cm}string server\+Information (
+\begin{DoxyParamCaption}
+\item[{string}]{servername, }
+\item[{string}]{developer}
+\end{DoxyParamCaption}
+)}\hypertarget{jsonconverter_8h_a9b4369d668f311c1f5fcdc600956281a}{}\label{jsonconverter_8h_a9b4369d668f311c1f5fcdc600956281a}
+
+
+get server information 
+
+\begin{DoxyReturn}{Returns}
+Json string that contains information about server 
+\end{DoxyReturn}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BookA</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        < /script
+        <!-- Optional theme -->
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity = "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin = "anonymous" >
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+            
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/testchat.css">
+
+</head>
+
+<body>
+    <% include partials/header %>
+        <div class="container-fluid " <div class="row">
+            <div class="col-md-1 col-md-offset-0">
+                Користувачі
+                <hr>
+                <% for(let User of users){%>
+                    <a href="/chat/<%=User._id%>"><img src="data:<%=User.mimetype%>;base64,<%=User.image.toString('base64')%>" alt="<%= User.name %>" class="img"></td></a>
+                    <%=User.name%>
+                        <hr color="black">
+                        <% } %>
+            </div>
+            <div class="col-md-9  col-md-offset-0 border">
+                <ol class="chat">
+                    <%if(messages){%>
+                        <% for(let message of messages){%>
+                            <%if(message.sender_id == user._id){ %>
+                                <li class="self">
+                                    <div class="avatar"><img src="data:<%=user.mimetype%>;base64,<%=user.image.toString('base64')%>" alt="<%= user.name %>" draggable="false" /> </div>
+                                    <div class="msg">
+                                        <p>
+                                            <%=message.data%>
+                                        </p>
+                                        <time><%=message.date%>/time>
+                    </div>
+                    </li>
+                  <% } else{%>
+                  <li class="other">
+                        <div class="avatar"><img src="data:<%=receiver.mimetype%>;base64,<%=receiver.image.toString('base64')%>" alt="<%= receiver.name %>" draggable="false" > </div>
+                        <div class="msg">
+                        <p><%=message.data%></p>
+                        <time><%=message.date%>/time>
+                    </li>
+                     <% } %>  
+                <% } %>
+            </ol>
+            <form   action="/chat/sendMessage" method="POST">
+              <input class="textarea" type="text" name="message" id="message"> 
+              <input type="submit" value="Отправить">
+              <input type="hidden" name="receiver_id" value=<%=receiver._id%> >
+            </form>
+            <% } %>
+            
+            </div>
+        </div>   
+    </body>
+
+</html>

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/vadim/projects/progbase2/labs/lab8/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/labs/lab8/include  -std=c++11 -g -g   -o CMakeFiles/json.dir/main.cpp.o -c /home/vadim/projects/progbase2/labs/lab8/main.cpp",
+  "file": "/home/vadim/projects/progbase2/labs/lab8/main.cpp"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/labs/lab8/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/labs/lab8/include  -std=c++11 -g -g   -o CMakeFiles/json.dir/src/jsonconverter.cpp.o -c /home/vadim/projects/progbase2/labs/lab8/src/jsonconverter.cpp",
+  "file": "/home/vadim/projects/progbase2/labs/lab8/src/jsonconverter.cpp"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/labs/lab8/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/labs/lab8/include  -std=c++11 -g -g   -o CMakeFiles/json.dir/src/places.cpp.o -c /home/vadim/projects/progbase2/labs/lab8/src/places.cpp",
+  "file": "/home/vadim/projects/progbase2/labs/lab8/src/places.cpp"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/labs/lab8/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/labs/lab8/include  -std=c++11 -g -g   -o CMakeFiles/json.dir/src/request.cpp.o -c /home/vadim/projects/progbase2/labs/lab8/src/request.cpp",
+  "file": "/home/vadim/projects/progbase2/labs/lab8/src/request.cpp"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/labs/lab8/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/labs/lab8/include  -std=c++11 -g -g   -o CMakeFiles/json.dir/src/tcp_server.cpp.o -c /home/vadim/projects/progbase2/labs/lab8/src/tcp_server.cpp",
+  "file": "/home/vadim/projects/progbase2/labs/lab8/src/tcp_server.cpp"
+}
+]

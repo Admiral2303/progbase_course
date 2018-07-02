@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/edd_xml_java/build",
+  "command": "/usr/bin/cc   -I/home/vadim/projects/progbase2/tasks/edd_xml_java/include -I/usr/include/libxml2  -std=c11 -g -Werror -Wall -fms-extensions  -g   -o CMakeFiles/eventsystem.dir/main.c.o   -c /home/vadim/projects/progbase2/tasks/edd_xml_java/main.c",
+  "file": "/home/vadim/projects/progbase2/tasks/edd_xml_java/main.c"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/edd_xml_java/build",
+  "command": "/usr/bin/cc   -I/home/vadim/projects/progbase2/tasks/edd_xml_java/include -I/usr/include/libxml2  -std=c11 -g -Werror -Wall -fms-extensions  -g   -o CMakeFiles/eventsystem.dir/src/list.c.o   -c /home/vadim/projects/progbase2/tasks/edd_xml_java/src/list.c",
+  "file": "/home/vadim/projects/progbase2/tasks/edd_xml_java/src/list.c"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/edd_xml_java/build",
+  "command": "/usr/bin/cc   -I/home/vadim/projects/progbase2/tasks/edd_xml_java/include -I/usr/include/libxml2  -std=c11 -g -Werror -Wall -fms-extensions  -g   -o CMakeFiles/eventsystem.dir/src/events.c.o   -c /home/vadim/projects/progbase2/tasks/edd_xml_java/src/events.c",
+  "file": "/home/vadim/projects/progbase2/tasks/edd_xml_java/src/events.c"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/edd_xml_java/build",
+  "command": "/usr/bin/cc   -I/home/vadim/projects/progbase2/tasks/edd_xml_java/include -I/usr/include/libxml2  -std=c11 -g -Werror -Wall -fms-extensions  -g   -o CMakeFiles/eventsystem.dir/src/xml_func.c.o   -c /home/vadim/projects/progbase2/tasks/edd_xml_java/src/xml_func.c",
+  "file": "/home/vadim/projects/progbase2/tasks/edd_xml_java/src/xml_func.c"
+}
+]

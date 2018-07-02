@@ -1,0 +1,1 @@
+profname: sasa; salary: 45; score: 2.3; name: qqq; surname: w; year: 547;

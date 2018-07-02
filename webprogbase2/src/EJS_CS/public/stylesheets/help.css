@@ -1,0 +1,9 @@
+.img {
+    width: 90%;
+    height: 90%;
+}
+
+body {
+    background-color: #BBB7B7;
+    background-image: url("../images/page-bg-1.jpg");
+}

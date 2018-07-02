@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/convert.h
+
+../include/function.h
+
+../include/list.h
+
+../include/menu.h
+
+/home/vadim/Atomproject/atomproject/lab4/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+progbase.h
+-
+pbconsole.h
+-
+list.h
+-
+convert.h
+-
+menu.h
+-
+function.h
+-
+

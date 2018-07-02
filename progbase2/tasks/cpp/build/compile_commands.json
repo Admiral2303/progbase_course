@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/cpp/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/tasks/cpp/include  -std=c++11 -g -O3 -DNDEBUG   -o CMakeFiles/cpp.dir/main.cpp.o -c /home/vadim/projects/progbase2/tasks/cpp/main.cpp",
+  "file": "/home/vadim/projects/progbase2/tasks/cpp/main.cpp"
+},
+{
+  "directory": "/home/vadim/projects/progbase2/tasks/cpp/build",
+  "command": "/usr/bin/c++    -I/home/vadim/projects/progbase2/tasks/cpp/include  -std=c++11 -g -O3 -DNDEBUG   -o CMakeFiles/cpp.dir/src/point2d.cpp.o -c /home/vadim/projects/progbase2/tasks/cpp/src/point2d.cpp",
+  "file": "/home/vadim/projects/progbase2/tasks/cpp/src/point2d.cpp"
+}
+]

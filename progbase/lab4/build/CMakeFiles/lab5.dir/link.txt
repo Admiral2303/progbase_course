@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c11 -Werror -Wall -O2 -g -DNDEBUG   CMakeFiles/lab5.dir/main.c.o  -o lab5 -rdynamic libprofecionals.a -lprogbase -lxml2 -ljansson -lcheck 
