@@ -7,4 +7,3 @@
 
 Пароль адміна: 12345678;
 
-Силка на mlab: mongodb://Admiral2303:Vadim2303@ds159845.mlab.com:59845/booka ; 
