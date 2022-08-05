@@ -13,7 +13,7 @@
     "busboy-body-parser": "^0.3.0",
     "ejs": "^2.5.2",
     "express": "^4.16.2",
-    "mongoose": "^4.12.4",
+    "mongoose": "^5.7.5",
     "read": "^1.0.7"
   }
 }
