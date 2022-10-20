@@ -20,7 +20,7 @@
         "express-session": "^1.15.6",
         "http": "0.0.0",
         "method-override": "^2.3.10",
-        "mongoose": "^4.12.4",
+        "mongoose": "^4.13.21",
         "morgan": "^1.9.0",
         "nconf": "^0.8.5",
         "node-env-file": "^0.1.8",
