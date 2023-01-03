@@ -12,7 +12,7 @@
         "basic-auth": "^2.0.0",
         "bluebird": "^3.5.1",
         "busboy-body-parser": "^0.3.0",
-        "config": "^1.27.0",
+        "config": "^1.31.0",
         "cookie-parser": "^1.4.3",
         "crypto": "^1.0.1",
         "ejs": "^2.5.2",
